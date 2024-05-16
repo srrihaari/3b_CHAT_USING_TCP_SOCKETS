@@ -9,7 +9,7 @@ To write a python program for creating Chat using TCP Sockets Links.
 4. Send and receive the message using the send function in socket.
 ## PROGRAM
 ## Client:
-
+```
 import socket 
 s=socket.socket() 
 s.connect(('localhost',8000)) 
@@ -17,9 +17,9 @@ while True:
     msg=input("Client > ") 
     s.send(msg.encode()) 
     print("Server > ",s.recv(1024).decode())
-
+```
 ## Server:
-
+```
 import socket
 s=socket.socket()
 s.bind(('localhost',8000))
@@ -30,7 +30,7 @@ while True:
  print("Client > ",ClientMessage)
  msg=input("Server > ")
  c.send(msg.encode())
-
+```
 ## OUPUT
 ## Client:
 ![WhatsApp Image 2024-05-10 at 11 07 49_3e989066](https://github.com/srrihaari/3b_CHAT_USING_TCP_SOCKETS/assets/145550674/c510caed-1ce5-49c5-a1a8-1e5b5aa7b943)
